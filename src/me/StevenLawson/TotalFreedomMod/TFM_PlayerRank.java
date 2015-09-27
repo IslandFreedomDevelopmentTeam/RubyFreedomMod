@@ -14,17 +14,15 @@ import org.bukkit.entity.Player;
 public enum TFM_PlayerRank
 {
     DEVELOPER("a " + ChatColor.DARK_PURPLE + "TotalFreedom Developer", ChatColor.DARK_PURPLE + "[TF-Dev]"),
-    FOP_DEVELOPER("a " + ChatColor.DARK_PURPLE + "Old FreedomOp Developer", ChatColor.DARK_PURPLE + "[FOP-Dev]"),
-    RF_DEVELOPER("a " + ChatColor.DARK_PURPLE + "Developer", ChatColor.DARK_PURPLE + "[Dev]"),
+    FOP_DEVELOPER("a " + ChatColor.DARK_PURPLE + "Old FreedomOp Developer", ChatColor.DARK_PURPLE + "[FOP-Dev]")
     IMPOSTOR("an " + ChatColor.YELLOW + ChatColor.UNDERLINE + "Impostor", ChatColor.YELLOW.toString() + ChatColor.UNDERLINE + "[IMP]"),
     FAKEIMPOSTOR("a " + ChatColor.YELLOW + ChatColor.UNDERLINE + "FAKE Impostor", ChatColor.YELLOW.toString() + ChatColor.UNDERLINE + "[IMP]"),
     NON_OP("a " + ChatColor.GREEN + "Non-OP", ChatColor.GREEN.toString()),
     OP("an " + ChatColor.RED + "OP", ChatColor.RED + "[OP]"),
-    LEAD_SPECIALIST("the " + ChatColor.GREEN + "Lead Specialist", ChatColor.GREEN + "[L-Specialist]"),
     SUPER("a " + ChatColor.GOLD + "Super Admin", ChatColor.GOLD + "[SA]"),
     TELNET("a " + ChatColor.DARK_GREEN + "Super Telnet Admin", ChatColor.DARK_GREEN + "[STA]"),
     SENIOR("a " + ChatColor.LIGHT_PURPLE + "Senior Admin", ChatColor.LIGHT_PURPLE + "[SrA]"),
-    OWNER("the " + ChatColor.BLUE + "Owner " + ChatColor.AQUA + "and" + ChatColor.BLUE + " Founder " + ChatColor.AQUA + "of " + ChatColor.RED + "RubyFreedom", ChatColor.translateAlternateColorCodes('&', "&8[&4Owner&8]&9")),
+    LUKA("the " + ChatColor.BLUE + "Owner " + ChatColor.AQUA + "and" + ChatColor.BLUE + " Founder " + ChatColor.AQUA + "of " + ChatColor.RED + "IslandFreedom", ChatColor.translateAlternateColorCodes('&', "&8[&cO&4w&5n&6e&3r &bof &6Isl&5and&6Free&4dom&8]&9")),
     SYS_ADMIN("a " + ChatColor.DARK_RED + "System-Admin", ChatColor.DARK_RED + "[Sys-Admin]"),
     HORSE("a " + ChatColor.DARK_RED + "System-Admin" + ChatColor.AQUA + " and the " + ChatColor.RED + "Admin Manager", ChatColor.DARK_RED + "[Sys. + Man.]"),
     LEAD_DEVELOPER("the " + ChatColor.DARK_PURPLE + "Lead Developer" + ChatColor.AQUA + " of " + ChatColor.RED + "RubyFreedom", ChatColor.DARK_PURPLE + "[L-Dev]"),
@@ -35,7 +33,7 @@ public enum TFM_PlayerRank
     DECY("a " + ChatColor.BLUE + "Co-Owner" + ChatColor.AQUA + " of " + ChatColor.RED + "RubyFreedom and the Decstar", ChatColor.BLUE + "[Decstar]"),
     MYSTERI("a " + ChatColor.GOLD + "Potato Caek", ChatColor.RED + "[Mysteri]"),
     DARK("an " + ChatColor.BLUE + "Former Owner " + ChatColor.AQUA + "but now a " + ChatColor.RED + "Co-Owner" + ChatColor.AQUA + ", and the " + ChatColor.DARK_PURPLE + "Development Team Manager", ChatColor.translateAlternateColorCodes('&', "&8[&CCo-Owner&8]&9")),
-    RUBY("the " + ChatColor.RED + "Ruby Hacker and the Owner and founder!", ChatColor.translateAlternateColorCodes('&', "&8[&4Ruby Hacker-&cOwner&8]")),
+    RUBY("the " + ChatColor.RED + "Ruby Hacker and the Exec-Lead-Developer!", ChatColor.translateAlternateColorCodes('&', "&8[&4Ru&3by &6Hac&1ker&b-&5Ex&6ec-&5Le&6ad-&1D&9e&2v&8]")),
     CHAR("the " + ChatColor.DARK_PURPLE + "Co-Chief Forum Developer and a Roblox Pro!", ChatColor.translateAlternateColorCodes('&', "&8[&5Co-Chief Forum Dev&8]&9")),
     CONSOLE("the " + ChatColor.DARK_PURPLE + "Console", ChatColor.DARK_PURPLE + "[Console]");
     private final String loginMessage;
@@ -90,87 +88,20 @@ public enum TFM_PlayerRank
         {
             return DEVELOPER;
         }
-
-        else if (sender.getName().equals("Joenmb"))
-        {
-            return CHAR;
-        }
         
         else if (sender.getName().equals("reuben4545"))
         {
             return RUBY;
         }
-        
-        else if (sender.getName().equals("eddieusselman"))
-        {
-            return SYS_ADMIN;
-        }
-        
-        else if (sender.getName().equals("ItsFenixMC"))
-        {
-            return SYS_ADMIN;
-        }
-        
-        else if (sender.getName().equals("CombosPvPs"))
-        {
-            return CREEPER;
-        }
-        
-        else if (sender.getName().equals("dlg666999"))
-        {
-            return DLG;
-        }
-        
-         else if (sender.getName().equals("thederpycow54"))
 
-        {
-            return EXEC;
-        }
-
-        else if (sender.getName().equals("AndySixx"))
-        {
-            return CO_OWNER;
-        }
-
-        else if (sender.getName().equals("iDelRey"))
-        {
-            return LEAD_DEVELOPER;
-        }
-
-        else if (sender.getName().equals("MysteriAce"))
-        {
-            return MYSTERI;
-        }
-
-        else if (sender.getName().equals("DarkHorse108"))
-        {
-            return HORSE;
-        }
-        
-         else if (sender.getName().equals("decyj145"))
-        {
-            return DECY;
-        }
-        
-        
         else if (FOP_DEVELOPERS.contains(sender.getName()))
         {
             return FOP_DEVELOPER;
         }
 
-        else if (RF_DEVELOPERS.contains(sender.getName()))
-        {
-            return RF_DEVELOPER;
-        }
-
         else if (SYS.contains(sender.getName()))
         {
             return SYS_ADMIN;
-        }
-
-        else if (sender.getName().equals("MysteriAce"))
-        {
-            return MYSTERI;
         }
 
         else if (EXECUTIVES.contains(sender.getName()))
